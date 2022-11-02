@@ -13,6 +13,7 @@ const logger = createLogger('createTodo');
 export const handler = middy(
   async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
     const userId = getUserId(event);
+    console.log('log userId', userId);
     try {
       return {
         statusCode: 200,
